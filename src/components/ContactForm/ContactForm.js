@@ -1,6 +1,9 @@
+//Core
 import React, { useState } from 'react';
 import v4 from 'uuid/v4';
 import PropTypes from 'prop-types';
+
+//instruments
 import styles from './ContactForm.module.css';
 
 const ContactForm = ({ onSubmitContact }) => {
@@ -42,6 +45,7 @@ const ContactForm = ({ onSubmitContact }) => {
           value={name}
           onChange={updaeName}
           id={inputId.inputName}
+          required
         />
       </label>
       <label className={styles.label} htmlFor={inputId.inputNumber}>
@@ -53,6 +57,7 @@ const ContactForm = ({ onSubmitContact }) => {
           value={number}
           onChange={updaeNumber}
           id={inputId.inputNumber}
+          required
         />
       </label>
       <button className={styles.btn} type="submit">

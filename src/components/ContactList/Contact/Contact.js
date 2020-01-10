@@ -1,5 +1,8 @@
+//Core
 import React from 'react';
 import PropTypes from 'prop-types';
+
+//instruments
 import styles from './Contact.module.css';
 
 const Contact = ({ name, number, onDelete }) => (

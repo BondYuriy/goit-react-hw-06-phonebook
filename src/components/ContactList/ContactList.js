@@ -1,7 +1,12 @@
+//Core
 import React from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import PropTypes from 'prop-types';
+
+//Components
 import Contact from './Contact/Contact';
+
+//instruments
 import styles from './ContactList.module.css';
 import slideLeft from './transition/slideLeft.module.css';
 

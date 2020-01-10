@@ -1,10 +1,15 @@
+//Core
 import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+//Components
 import ContactForm from '../ContactForm/ContactForm';
 import Filter from '../Filter/Filter';
 import ContactList from '../ContactList/ContactList';
+
+//instruments
 import styles from './App.module.css';
 import slideLeftAppear from './transition/slideLeftAppear.module.css';
 import fideTransition from './transition/fide.module.css';
@@ -20,14 +25,7 @@ const App = () => {
     );
 
     if (isResult.length > 0) {
-      toast.error('Сontact exists!', {
-        position: 'top-right',
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: false,
-      });
+      toast.error('Сontact exists!');
     } else {
       setContacts(prevContacts => [obj, ...prevContacts]);
     }
@@ -59,17 +57,7 @@ const App = () => {
 
   return (
     <div className={styles.container}>
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnVisibilityChange
-        draggable
-        pauseOnHover
-      />
+      <ToastContainer />
       <CSSTransition in timeout={500} classNames={slideLeftAppear} appear>
         <h1 className={styles.logo}>Phonebook</h1>
       </CSSTransition>
